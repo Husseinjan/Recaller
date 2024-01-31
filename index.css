@@ -1,3 +1,4 @@
+/* Общие стили */
 body {
   padding: 0;
   margin: 0;
@@ -7,24 +8,26 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Навигационная панель */
 .nav {
   width: 100%;
-  height: auto; /* Изменено на автоматическое значение для поддержки различных высот */
+  height: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: rgba(255, 255, 255, 0.744);
-  
+  background-color: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+ 
 }
 
 .nav > img {
-  max-width: 100%; /* Изменено на максимальную ширину */
-  height: auto; /* Добавлено, чтобы сохранить пропорции */
+  max-width: 100%;
+  height: auto;
   padding: 0.4em;
   width: 8em;
-
 }
 
+/* Основной контент */
 .main {
   display: flex;
   justify-content: center;
@@ -35,14 +38,14 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: aliceblue;
-  background-color: #1c0e8a66;
+  color: #fff;
   width: 90%;
-  height: auto; /* Изменено на автоматическое значение для поддержки различных высот */
+  height: auto;
   margin: 1em;
   flex-direction: column;
   border-radius: 25px;
-  padding: 1em; /* Добавлено для увеличения отступа */
+  padding: 1em;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .cards {
@@ -51,7 +54,7 @@ body {
   align-items: center;
   margin: 1em;
   width: 100%;
-  flex-wrap: wrap; /* Добавлено для переноса карточек на маленьких экранах */
+  flex-wrap: wrap;
 }
 
 .card {
@@ -59,13 +62,13 @@ body {
   justify-content: space-between;
   flex-direction: column;
   align-items: center;
-  background-color: rgba(3, 32, 255, 0.525);
+  background-color: rgba(3, 32, 255, 0.7);
   border-radius: 15px;
   padding: 2em;
   cursor: pointer;
   width: 10em;
-  margin: 0.5em; /* Добавлено для создания промежутков между карточками */
-  max-width: 300px; /* Добавлено, чтобы ограничить максимальную ширину карточек */
+  margin: 0.5em;
+  max-width: 300px;
 }
 
 .emoji {
@@ -74,33 +77,34 @@ body {
   margin: 0;
 }
 
-ul{
+ul {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 1em;
 }
- li{
- list-style-type: none;
- padding: 0.5em;
- font-size: 1.5em;
- color: rgb(0, 119, 255);
- font-weight: 800;
- font-family: -apple-system;
- 
+
+li {
+  list-style-type: none;
+  padding: 0.5em;
+  font-size: 1.5em;
+  color: #0077ff;
+  font-weight: 800;
+  font-family: -apple-system;
+  cursor: pointer;
 }
 
-
-/* Медиа-запрос для устройств с шириной экрана до 768px (например, планшеты и мобильные устройства) */
-@media only screen and (max-width: 768px) {
+/* Медиа-запросы */
+/* Мобильные устройства */
+@media only screen and (max-width: 480px) {
   .nav {
-    height: auto;
     flex-direction: column;
     align-items: center;
+    padding: 0.5em;
   }
   
   .nav > img {
-    width: 8em;
+    width: 7em;
     height: auto;
     margin-bottom: 0.5em;
   }
@@ -112,4 +116,32 @@ ul{
   .card {
     max-width: 100%;
   }
+}
+
+/* Планшеты */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5em;
+  }
+  
+  .nav > img {
+    width: 7em;
+    height: auto;
+    margin-bottom: 0.5em;
+  }
+  
+  .container {
+    width: 95%;
+  }
+  
+  .card {
+    max-width: 100%;
+  }
+}
+
+/* Десктопные устройства */
+@media only screen and (min-width: 769px) {
+  /* Дополнительные стили для десктопных устройств */
 }
