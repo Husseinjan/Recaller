@@ -18,19 +18,20 @@ document.addEventListener("DOMContentLoaded", function () {
   const userCell = document.querySelector(".user");
   const modal = document.getElementById("modal");
   const modalUsername = document.getElementById("modal-username");
-  const modalRatingInfo = document.getElementById("modal-rating-info");
+  const fiveRating = document.getElementById("fiveRating");
+  const fourRating = document.getElementById("fourRating");
+
   const closeModal = document.getElementsByClassName("close")[0];
 
   userCell.addEventListener("click", function () {
     const username = userCell.textContent;
     const ratingInfo = userCell.parentNode.querySelectorAll("td:not(.user)");
 
-    modalUsername.innerText = "Пользователь: " + username;
-    modalRatingInfo.innerText =
-      "Количество оценок: " +
-      ratingInfo.length +
-      "\nВремя: " +
-      userCell.parentNode.lastElementChild.textContent;
+    modalUsername.innerText = "Логин : " + username;
+    fiveRating.innerText ="+" 
+    fourRating.innerText="+"
+       
+  
 
     modal.style.display = "block";
   });
