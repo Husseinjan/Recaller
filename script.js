@@ -28,10 +28,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const ratingInfo = userCell.parentNode.querySelectorAll("td:not(.user)");
 
     modalUsername.innerText = "Логин : " + username;
-    fiveRating.innerText ="+" 
-    fourRating.innerText="+"
-       
-  
+    fiveRating.innerText = "+";
+    fourRating.innerText = "+";
 
     modal.style.display = "block";
   });
