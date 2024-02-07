@@ -23,16 +23,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const closeModal = document.getElementsByClassName("close")[0];
 
-  // userCell.addEventListener("click", function () {
-  //   const username = userCell.textContent;
-  //   const ratingInfo = userCell.parentNode.querySelectorAll("td:not(.user)");
+  userCell.addEventListener("click", function () {
+    const username = userCell.textContent;
+    const ratingInfo = userCell.parentNode.querySelectorAll("td:not(.user)");
 
-  //   modalUsername.innerText = "Логин : " + username;
-  //   fiveRating.innerText = "+";
-  //   fourRating.innerText = "+";
+    modalUsername.innerText = "Логин : " + username;
+    fiveRating.innerText = "+";
+    fourRating.innerText = "+";
 
-  //   modal.style.display = "block";
-  // });
+    modal.style.display = "block";
+  });
 
   closeModal.onclick = function () {
     modal.style.display = "none";
