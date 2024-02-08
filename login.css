@@ -49,8 +49,8 @@ input {
 }
 .enter{
   background-color: rgb(1, 1, 179);
-  color: aliceblue;
+  /* color: aliceblue;
   width: 94%;
   padding: 0.4em;
-  margin: 0.5em;
+  margin: 0.5em; */
 }
